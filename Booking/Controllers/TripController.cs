@@ -99,7 +99,7 @@ namespace Booking.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult RegisterForTrip([FromBody] RegisterTripModel model)
+        public IActionResult RegisterTrip([FromBody] RegisterTripModel model)
         {
             var validationErrors = _tripService.ValidateTripRegestion(model, (int)RegestrationTypeEnum.Register);
 
@@ -122,7 +122,7 @@ namespace Booking.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult UnregisterForTrip([FromBody] RegisterTripModel model)
+        public IActionResult UnregisterTrip([FromBody] RegisterTripModel model)
         {
             var validationErrors = _tripService.ValidateTripRegestion(model, (int)RegestrationTypeEnum.Unregister);
 
