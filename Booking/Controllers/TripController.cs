@@ -131,7 +131,7 @@ namespace Booking.WebApi.Controllers
             if (!validationErrors.Any())
             {
                 if (!_tripService.UnregisterTrip(model))
-                    return BadRequest(new { message = "Error has occured while deleting the trip" });
+                    return BadRequest(new { message = "Error has occured while unregistering from the trip" });
                 return Ok(true);
             }
             else
